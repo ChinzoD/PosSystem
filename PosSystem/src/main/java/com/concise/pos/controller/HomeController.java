@@ -1,4 +1,4 @@
-package com.concise.pos;
+package com.concise.pos.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
