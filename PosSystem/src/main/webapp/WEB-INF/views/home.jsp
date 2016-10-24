@@ -8,7 +8,9 @@
 <h1>
 	Hello world!  
 </h1>
-
+<a href="<spring:url value='/products' />">
+						
+					</a>
 <P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
