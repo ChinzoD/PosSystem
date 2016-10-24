@@ -29,11 +29,7 @@ public class ProductServiceImpl implements ProductService{
 		return productById;
 	}
 
-	@Override
-	public List<Product> getProductsByCategory(String category) {
-		List<Product> prCatagory = (List<Product>)productrep.getProductsByCategory(category);
-		return prCatagory;
-	}
+	
 
 	@Override
 	public void addProduct(Product product) {

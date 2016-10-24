@@ -1,15 +1,10 @@
 package com.concise.pos.controller;
-
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.concise.pos.domain.Product;
-
+import com.concise.pos.service.CategoryService;
 import com.concise.pos.service.ProductService;
 
 @Controller
@@ -28,6 +23,9 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	@Autowired
+	private CategoryService categoryService;
+	
 
 	@RequestMapping
 	public String list(Model model) {
@@ -46,7 +44,7 @@ public class ProductController {
 
 	@RequestMapping("/{category}")
 	public String getProductsByCategory(Model model, @PathVariable("category") String category) {
-		List<Product> products = productService.getProductsByCategory(category);
+		List<Product> products = categoryService.getProductsByCategory(category);
 
 		model.addAttribute("products", products);
 		return "products";
