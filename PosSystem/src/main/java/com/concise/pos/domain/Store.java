@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class Store implements java.io.Serializable {
 
-	private Integer storeId;
+	private Long storeId;
 	private String name;
 	private int phone;
 	private List<Product> products;
@@ -29,11 +29,11 @@ public class Store implements java.io.Serializable {
 		this.products = products;
 	}
 
-	public Integer getStoreId() {
+	public Long getStoreId() {
 		return this.storeId;
 	}
 
-	public void setStoreId(Integer storeId) {
+	public void setStoreId(Long storeId) {
 		this.storeId = storeId;
 	}
 
