@@ -13,7 +13,10 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h1>Products</h1>
-				<p>All the available products in our store</p>
+				<div>
+				<ul> <li>
+				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -21,6 +24,7 @@
 	<section class="container" id="products">
 		<div class="row">
 			<c:forEach items="${products}" var="product">
+			
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="thumbnail">
 					<img  src="<c:url value="/resource/images/${product.productId}.png"></c:url>" alt="image" style = "width:100%">
