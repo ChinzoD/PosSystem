@@ -21,7 +21,7 @@
 	</section>
 <table>
         <tr>
-            <c:forEach var = "listValue" items = "${Catagories}">
+            <c:forEach var = "listValue" items = "${categories}">
             <td>
                 <c:out value="${listValue.Name}"/>
             </td>

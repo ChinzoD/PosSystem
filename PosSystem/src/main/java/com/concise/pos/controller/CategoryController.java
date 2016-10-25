@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.concise.pos.service.CategoryService;
 
 @Controller
-@RequestMapping(value = "/catagory")
+@RequestMapping(value = "/category")
 public class CategoryController {
 	@Autowired
 	CategoryService catSer;
@@ -19,9 +19,9 @@ public class CategoryController {
 	
 	@RequestMapping("/all")
 	public String allProducts(Model model ) {
-		model.addAttribute("Catagories", catSer.getAllCategories());
+		model.addAttribute("categories", catSer.getAllCategories());
 
-		return "/catagory";
+		return "category";
 	}
 	
 	
