@@ -1,5 +1,4 @@
 package com.concise.pos.domain;
-// Generated Oct 14, 2016 2:40:26 PM by Hibernate Tools 5.1.0.Beta1
 
 import java.util.Date;
 import java.util.HashSet;
