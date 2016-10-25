@@ -12,15 +12,35 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
-	<context:component-scan base-package="com.concise.pos.controller" />
+	<context:component-scan base-package="com.concise.pos" />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<mvc:resources  location="/resources/"  mapping="/resource/**"/>
+	<mvc:resources  location="/metronic/"  mapping="/metronic/**"/>
 
+	<bean id="tilesViewResolver"   class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	</bean>
+    
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/tiles-def.xml</value>
+            </list>
+        </property>
+	</bean>
+	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+        	<mvc:mapping path="/**"/>
+        	<bean class="com.concise.pos.interceptor.VolunteerInterceptor" />
+    	</mvc:interceptor>	 			
+	</mvc:interceptors>
 	
 </beans>
