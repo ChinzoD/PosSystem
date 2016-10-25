@@ -19,25 +19,25 @@ public class StockServiceImp implements StockService {
 	StockRepository stockRepository;
 
 	@Override
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+//	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public Store save(Store store) {
 		return stockRepository.save(store);
 	}
 
 	@Override
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+//	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void update(Store store) {
 		stockRepository.save(store);
 	}
 
 	@Override
-	public void delete(Long storeId) {
-		stockRepository.delete(storeId);
+	public void delete(Integer stockId) {
+		stockRepository.delete(stockId);
 	}
 
 	@Override
-	public Store read(Long storeId) {
-		return stockRepository.findOne(storeId);
+	public Store read(Integer stockId) {
+		return stockRepository.findOne(stockId);
 	}
 
 	@Override

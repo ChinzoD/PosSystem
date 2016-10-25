@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.concise.pos.domain.Store;
 
 @Repository
-public interface StockRepository extends CrudRepository<Store, Long> { 
+public interface StockRepository extends CrudRepository<Store, Integer> { 
 
 }

@@ -10,9 +10,9 @@ public interface StockService {
 
 	void update(Store store);
 
-	void delete(Long storeId);
+	void delete(Integer stockId);
 
-	Store read(Long storeId);
+	Store read(Integer stockId);
 
 	List<Store> findAll();
 }
