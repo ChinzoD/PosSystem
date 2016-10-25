@@ -1,7 +1,10 @@
 package com.concise.pos.controller;
+
 import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,9 +26,9 @@ public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	
 	@Autowired
 	private CategoryService categoryService;
-	
 
 	@RequestMapping
 	public String list(Model model) {
@@ -44,7 +47,7 @@ public class ProductController {
 
 	@RequestMapping("/{category}")
 	public String getProductsByCategory(Model model, @PathVariable("category") String category) {
-		List<Product> products = categoryService.getProductsByCategory(category);
+		List<Product> products = productService	.getProductsByCategory(category);
 
 		model.addAttribute("products", products);
 		return "products";

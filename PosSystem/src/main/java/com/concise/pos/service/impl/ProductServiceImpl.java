@@ -1,8 +1,6 @@
 package com.concise.pos.service.impl;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,14 +28,17 @@ public class ProductServiceImpl implements ProductService{
 		return productById;
 	}
 
+	@Override
+	public List<Product> getProductsByCategory(String category) {
+		List<Product> prCatagory = (List<Product>)productrep.getProductsByCategory(category);
+		return prCatagory;
+	}
 	
 
 	@Override
 	public void addProduct(Product product) {
 		productrep.save(product);
 		
-	}	
-
-	
+	}
 	
 }
