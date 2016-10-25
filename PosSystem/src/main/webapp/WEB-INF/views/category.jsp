@@ -9,11 +9,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Category</title>
 </head>
 <body>
-<form:select path="product">
-    <form:options items="${productList}"/>
-</form:select>
+<section>
+		<div class="jumbotron">
+			<div class="container">
+				<h4>Category List</h4>				
+			</div>
+		</div>
+	</section>
+<table>
+        <tr>
+            <c:forEach var = "listValue" items = "${Catagories}">
+            <td>
+                <c:out value="${listValue.Name}"/>
+            </td>
+            <td>
+                <c:out value="${listValue.Description}"/>
+            </td>
+            </c:forEach>
+        </tr>
+</table>
 </body>
 </html>
