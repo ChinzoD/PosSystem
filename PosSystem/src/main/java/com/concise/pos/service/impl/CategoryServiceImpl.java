@@ -1,4 +1,4 @@
-package com.concise.pos.service;
+package com.concise.pos.service.impl;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.concise.pos.domain.Product;
 import com.concise.pos.repository.CategoryRepository;
+import com.concise.pos.service.CategoryService;
 
 @Service
 @Transactional

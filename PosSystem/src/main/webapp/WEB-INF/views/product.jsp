@@ -24,11 +24,9 @@
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
 				<p>
-					<strong>Item Code : </strong><span class="label label-warning">${product.productId}</span>
+					<strong>Item Code : </strong><span >${product.productId}</span>
 				</p>
-				<p>
-					<strong>manufacturer</strong> : ${product.manufacturer}
-				</p>
+			
 				<p>
 					<strong>category</strong> : ${product.category}
 				</p>
@@ -36,11 +34,10 @@
 					<strong>Condition</strong> : ${product.conditions}
 				</p>
 				<p>
-					<strong>Availble units in stock </strong> : ${product.unitsInStock}
+					<strong> Currently available  </strong> : ${product.unitsInStock}
 				</p>
 				<h4>${product.unitPrice} USD</h4>
-				<p ng-controller="cartCtrl">
-					<a href="#" class="btn btn-warning btn-large" ng-click="checkout('${product.productId}')"> 
+			
 <span class="glyphicon-shopping-cart glyphicon"></span> Purchase </a>
 <a href="<spring:url value="/cart" />" class="btn btn-default">
 	<span class="glyphicon-hand-right glyphicon"></span> View Cart
