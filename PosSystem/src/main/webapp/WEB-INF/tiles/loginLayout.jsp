@@ -47,7 +47,7 @@
 </div>
 <tiles:insertAttribute name="content"></tiles:insertAttribute>
 <div class="copyright">
-	 2014 © Metronic. Admin Dashboard Template.
+	 2016 © 
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

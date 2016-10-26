@@ -84,7 +84,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="<c:url value="/" />">Home</a>
+						<a href="<c:url value="/" />">Sales</a>
 					</li>
 					<li>
 						<a href="<c:url value="/transaction" />">Transactions</a>
@@ -106,7 +106,7 @@
 				<div class="row margin-top-10">
 					<div class="col-md-12">
 						<!-- BEGIN PROFILE SIDEBAR -->
-						<div class="profile-sidebar" style="width: 300px;">
+						<div class="profile-sidebar" style="width: 250px;">
 							<!-- PORTLET MAIN -->
 							<div class="portlet light profile-sidebar-portlet">
 								<div class="panel-heading">

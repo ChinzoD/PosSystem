@@ -32,9 +32,9 @@ public class VolunteerInterceptor extends HandlerInterceptorAdapter {
 
 		if (principal != null) {
 			if (request.isUserInRole("ROLE_ADMIN") )
-				userMessage = "There is ALWAYS Free cookies at www.freebies.com";
+				userMessage = "ROLE_ADMIN";
 			else 
-				userMessage = "We have Many NEW and exciting Volunteer opportunities!!!";
+				userMessage = "Not ROLE ADMIN";
  	}
 	
 //		System.out.println("Calling postHandle");
