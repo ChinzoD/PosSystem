@@ -36,7 +36,7 @@ public class VolunteerInterceptor extends HandlerInterceptorAdapter {
  	}
 	
 //		System.out.println("Calling postHandle");
-		modelAndView.getModelMap().addAttribute("SpecialBlurb", userMessage);
+//		modelAndView.getModelMap().addAttribute("SpecialBlurb", userMessage);
 
 		return;
 	}

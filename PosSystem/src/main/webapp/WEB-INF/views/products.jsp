@@ -29,8 +29,8 @@
 							<ul class="nav navbar-nav">
 								<li class="active"><a href="#">Home</a></li>
 								<li><a href="<spring:url value='/about' />" >About</a></li>
-								<li><a href="<spring:url value='/about' />">Category</a></li>
-								<li><a href="<spring:url value='/about' />">Contact</a></li>
+								<li><a href="<spring:url value='/category' />">Category</a></li>
+								
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="#"><span
@@ -55,7 +55,7 @@
 						<div class="caption">
 							<h3>${product.name}</h3>
 							<p>${product.description}</p>
-							<p>${product.unitPrice}USD</p>
+							<p>${product.price}USD</p>
 							<p>Available ${product.unitsInStock} units in stock</p>
 							<p>
 								<a

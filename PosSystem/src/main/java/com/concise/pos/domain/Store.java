@@ -18,10 +18,13 @@ import javax.persistence.Table;
 @Table(name = "store", catalog = "concise_pos")
 public class Store implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer storeId;
 	private String name;
 	private int phone;
-	private List<Product> products;
 
 	public Store() {
 	}
@@ -31,15 +34,8 @@ public class Store implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	public Store(String name, int phone, List<Product> products) {
-		this.name = name;
-		this.phone = phone;
-		this.products = products;
-	}
-
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-
 	@Column(name = "storeId", unique = true, nullable = false)
 	public Integer getStoreId() {
 		return this.storeId;
@@ -65,15 +61,6 @@ public class Store implements java.io.Serializable {
 
 	public void setPhone(int phone) {
 		this.phone = phone;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "store")
-	public List<Product> getProducts() {
-		return this.products;
-	}
-
-	public void setProducts(List<Product> products) {
-		this.products = products;
 	}
 
 }

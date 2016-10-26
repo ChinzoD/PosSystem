@@ -32,7 +32,7 @@
 		<p>
 			<strong> Currently available </strong> : ${product.unitsInStock}
 		</p>
-		<h4>${product.unitPrice}USD</h4>
+		<h4>${product.price}USD</h4>
 			<a href="<spring:url value="/products" />" class="btn btn-default">
 				<span class="glyphicon-hand-left glyphicon"></span> back
 			</a>

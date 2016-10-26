@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.concise.pos.domain.Product;
+import com.concise.pos.exception.ProductNotFoundException;
 import com.concise.pos.repository.ProductRepository;
 import com.concise.pos.service.ProductService;
 @Service
@@ -23,9 +24,12 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public Product getProductById(String productID) {
-		Product productById= productrep.getProductByProductId(productID);
-		return productById;
+	public Product getProductById(Integer productID) throws ProductNotFoundException {
+		Product product = productrep.getProductByProductId(productID);
+		if(product==null) {			
+			throw new ProductNotFoundException(productID, "");
+		}
+		return product;
 	}
 
 	@Override
@@ -38,6 +42,19 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public void addProduct(Product product) {
 		productrep.save(product);
+		
+	}
+
+	@Override
+	public void editProduct(Product product) {
+		productrep.save(product);
+				
+	}
+
+	@Override
+	public void deleteProduct(Product product) {
+		productrep.delete(product);
+		
 		
 	}
 	
