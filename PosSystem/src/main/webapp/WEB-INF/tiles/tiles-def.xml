@@ -19,4 +19,8 @@
 		<put-attribute name="content"   value="/WEB-INF/views/sell.jsp"/> 
 	</definition>
 	
+	<definition name="sales" extends="base-definition">
+		<put-attribute name="content"   value="/WEB-INF/views/sales.jsp"/> 
+	</definition>
+	
 </tiles-definitions>

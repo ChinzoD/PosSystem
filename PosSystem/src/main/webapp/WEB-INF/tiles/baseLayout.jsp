@@ -107,6 +107,7 @@
 							<div class="portlet light profile-sidebar-portlet">
 								<div class="panel-heading">
 									<h4>Left Sidebar</h4>
+									
 								</div>
 								<div class="panel-body">
 
