@@ -11,7 +11,7 @@ import com.concise.pos.domain.Product;
 
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Long> {
-	Product getProductByProductId(String key);
+	Product getProductByProductId(Integer productID);
 
 	// findAll comes with repository
 	@Query("SELECT p FROM Product p")

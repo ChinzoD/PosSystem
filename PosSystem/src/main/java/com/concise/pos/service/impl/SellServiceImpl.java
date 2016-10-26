@@ -21,6 +21,7 @@ public class SellServiceImpl implements SellService {
 	SellRepository sellRepository;
 	
 	
+	@Override
 	public Sell save(Sell sell) {
 		return sellRepository.save(sell);
 		
@@ -30,6 +31,7 @@ public class SellServiceImpl implements SellService {
 		return (List<Sell>)sellRepository.findAll();
 	}
 	
+	@Override
 	public Sell find(Integer id) {
 		return sellRepository.findOne(id);
 	}

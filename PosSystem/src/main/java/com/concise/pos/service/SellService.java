@@ -2,8 +2,6 @@ package com.concise.pos.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.concise.pos.domain.Sell;
 
 public interface SellService {

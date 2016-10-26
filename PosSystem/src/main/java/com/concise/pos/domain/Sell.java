@@ -2,9 +2,7 @@ package com.concise.pos.domain;
 // Generated Oct 26, 2016 2:24:30 PM by Hibernate Tools 5.1.0.CR1
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

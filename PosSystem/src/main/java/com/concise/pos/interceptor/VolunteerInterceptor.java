@@ -5,8 +5,6 @@ import java.security.Principal;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -38,7 +36,7 @@ public class VolunteerInterceptor extends HandlerInterceptorAdapter {
  	}
 	
 //		System.out.println("Calling postHandle");
-		modelAndView.getModelMap().addAttribute("SpecialBlurb", userMessage);
+//		modelAndView.getModelMap().addAttribute("SpecialBlurb", userMessage);
 
 		return;
 	}
