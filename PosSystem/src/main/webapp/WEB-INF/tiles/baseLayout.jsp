@@ -59,10 +59,6 @@
 								<li class="divider">
 								</li>
 								<li>
-									<a href="extra_lock.html">
-									<i class="icon-lock"></i> Lock Screen </a>
-								</li>
-								<li>
 									<a href="<c:url value="/logout" />" >
 									<i class="icon-key"></i> Log Out </a>
 								</li>
@@ -84,7 +80,7 @@
 			<div class="hor-menu ">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="<c:url value="/" />">Sales</a>
+						<a href="<c:url value="/sales" />">Sales</a>
 					</li>
 					<li>
 						<a href="<c:url value="/transaction" />">Transactions</a>
@@ -173,6 +169,8 @@
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="<c:url value="/metronic/assets/global/plugins/jquery.sparkline.min.js" />" type="text/javascript"></script>
+<script src="<c:url value="/metronic/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js" />"  type="text/javascript"></script>
+<script src="<c:url value="/metronic/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js" />"  type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<c:url value="/metronic/assets/global/scripts/metronic.js" />" type="text/javascript"></script>
