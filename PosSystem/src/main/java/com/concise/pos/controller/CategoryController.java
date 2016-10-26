@@ -1,5 +1,7 @@
 package com.concise.pos.controller;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +20,7 @@ public class CategoryController {
 	
 	
 	@RequestMapping("/all")
-	public String allProducts(Model model ) {
+	public String allProducts(Model model  ) {
 		model.addAttribute("categories", catSer.getAllCategories());
 
 		return "category";

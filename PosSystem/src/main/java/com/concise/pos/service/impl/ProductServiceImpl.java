@@ -24,13 +24,13 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public Product getProductById(String productID) {
-		Product productById= (Product)productrep.getProductByProductId(productID);
+		Product productById= productrep.getProductByProductId(productID);
 		return productById;
 	}
 
 	@Override
 	public List<Product> getProductsByCategory(String category) {
-		List<Product> prCatagory = (List<Product>)productrep.getProductsByCategory(category);
+		List<Product> prCatagory = productrep.getProductsByCategory(category);
 		return prCatagory;
 	}
 	

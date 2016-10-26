@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.concise.pos.domain.Category;
-import com.concise.pos.domain.Product;
 import com.concise.pos.repository.CategoryRepository;
 import com.concise.pos.service.CategoryService;
 
