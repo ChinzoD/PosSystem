@@ -17,6 +17,7 @@
 		is activated -->
 	<!-- use-expressions enables URL level authorization - allows SPEL syntax -->
 	<security:http use-expressions="true">
+		<security:csrf disabled="true" />
 
 		<!-- if non-standard ports for HTTP and/or HTTPS, you can specify them 
 			here -->
